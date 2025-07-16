@@ -6,7 +6,7 @@ _start:
 
 increase_even:
     
-        push eax        ;push eax value
+        push eax        
 
         mov eax, 4
         mov ebx, 1
@@ -14,16 +14,15 @@ increase_even:
         mov edx, space_len
         int 0x80
 
-        ;the following code add extra line
         mov eax, 4
         mov ebx, 1
         mov ecx, space
         mov edx, 1
         int 0x80
 
-        pop eax        ;restore eax value
+        pop eax        
         add eax, 2
-        cmp eax, 20        ;end number
+        cmp eax, 20       
         jl increase_even
 
         mov eax, 1
